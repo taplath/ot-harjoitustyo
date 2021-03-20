@@ -1,0 +1,113 @@
+commit 428697d3f1666f40aded7fc0ef81df35f3d9e37a
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:14:28 2021 +0200
+
+    commituitu
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 41b6a623ccbc2b8ada25db92db674c9a23d995ab
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:12:36 2021 +0200
+
+    uusia tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a97e2fbeecaa926953c9157c4783c2810922beba
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:09:31 2021 +0200
+
+    muutoksia
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 5 +++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+commit 419634f8a69fc1a955abb77d5c774730f7946afd
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:08:36 2021 +0200
+
+    tiedostonnimi muutettu
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c9d79679b52423d1a56a99b76cb6cf3e4a17dc78
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:07:33 2021 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 811b3b75f84f3991a54c8b4ed69c9c5cb7e1219a
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:05:50 2021 +0200
+
+    lisätty ja poistettu tekstiä
+
+ tiedosto.txt | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+commit f79b5504f55eaaca59a6112456bedc52f8a3b276
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:04:54 2021 +0200
+
+    lisätty tekstiä tiedosto.txt
+
+ tiedosto.txt | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+commit 4c363be9fb9e990f9ea5ab216470f2ea8783ea9e
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:01:40 2021 +0200
+
+    hakemistosta uusi tiedosto lisätty
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit aed08717fe6a14b6be1c17f1b80296d6add31166
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 19:00:48 2021 +0200
+
+    tämä on commit
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 704217e632ac71f35cf50f6c377a45dc117b3f08
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 18:59:09 2021 +0200
+
+    kolmas lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 83a2f548d6f8f2ed873a669b3ccca62225f0d245
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 18:55:08 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit a19466ae916cbf6aa46d993317ed8db742ca0dd4
+Author: Tapani Plathan <tapani.platha@gmail.com>
+Date:   Sat Mar 20 18:52:32 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

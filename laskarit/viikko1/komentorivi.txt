@@ -1,0 +1,14 @@
+plathant@lx0-fuxi279:~$ tree kurssit
+kurssit
+└── ot2021
+    ├── muutokset_viikko1.txt
+    └── ot_viikko1
+        ├── eka.txt
+        ├── kolmas.txt
+        ├── stuff
+        │   └── jokintiedosto.txt
+        └── tiedostoja
+            ├── file22
+            └── file3
+
+4 directories, 6 files
