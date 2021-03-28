@@ -1,4 +1,4 @@
-package com.tplathan.covidhack21;
+package com.tplathan.covidhack21.gui;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;

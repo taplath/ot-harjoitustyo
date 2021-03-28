@@ -1,6 +1,5 @@
 package com.tplathan.covidhack21.gui;
 
-import com.tplathan.covidhack21.DrawBoard;
 import com.tplathan.covidhack21.StaticLevel;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
