@@ -2,7 +2,7 @@ package com.tplathan.covidhack21.monsters;
 
 import com.tplathan.covidhack21.monsters.Action;
 
-public class Junnudevaaja implements Monster {
+public class Junnu implements Monster {
 
     @Override
     public char character(char character) {
