@@ -4,7 +4,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
 //Draws the board for the GUI
-//TODO: Move to correct package
 //TODO: Expand
 public class DrawBoard {
 
