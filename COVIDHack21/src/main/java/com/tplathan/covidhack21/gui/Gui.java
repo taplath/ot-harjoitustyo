@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
 public class Gui {
+    
     private Game game;
     private GridPane levelPane;
     private Scene scene;
