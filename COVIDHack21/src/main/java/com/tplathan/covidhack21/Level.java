@@ -3,13 +3,16 @@ package com.tplathan.covidhack21;
 
 import com.tplathan.covidhack21.monsters.Monster;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Level {
+    private HashMap<Coordinate, TerrainType> terrain;
     private ArrayList<Monster> monsters;
     private Coordinate playerCoordinate;
     private Coordinate staircaseCoordinate;
     
     public Level() {
+        this.terrain = new HashMap<>();
         this.monsters = new ArrayList<>();
         this.playerCoordinate = new Coordinate(0, 0);
         // Actual coordinate TBD
@@ -34,5 +37,13 @@ public class Level {
     
     public Coordinate getPlayerCoordinate() {
         return this.playerCoordinate;
+    }
+    
+    public void setTerrain(HashMap<Coordinate, TerrainType> terrain) {
+        this.terrain = terrain;
+    }
+    
+    public HashMap<Coordinate, TerrainType> getTerrain() {
+        return this.terrain;
     }
 }

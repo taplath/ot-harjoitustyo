@@ -1,13 +1,10 @@
 package com.tplathan.covidhack21;
 
-public class LevelLoader {
+import java.util.HashMap;
 
-    public static Level firstLevel() {
-        return new Level();
-    }
-    
+public class LevelLoader {
     // Simple level for testing and future expansion
-    public static final char[][] LEVEL = new char[][]{
+    public static final char[][] LEVEL_BASE = new char[][]{
         "################################################################################".toCharArray(),
         "#..............................................................................#".toCharArray(),
         "#..............................................................................#".toCharArray(),
@@ -40,4 +37,30 @@ public class LevelLoader {
         "#..............................................................................#".toCharArray(),
         "#..............................................................................#".toCharArray(),
         "################################################################################".toCharArray()};
+
+    public static Level firstLevel() {
+        Level level = new Level();
+        
+        HashMap<Coordinate, TerrainType> terrainMap = new HashMap<>();
+        for (int y = 0; y < LEVEL_BASE.length; y++) {
+            for (int x = 0; x < LEVEL_BASE[0].length; x++) {
+                char terrainMarker = LEVEL_BASE[y][x];
+                boolean isWall = false;
+                if (terrainMarker == '#') {
+                    isWall = true;
+                }
+                TerrainType terrain = new TerrainType(terrainMarker, isWall);
+                
+                // y coordinate 0 should be bottom, not top
+                int invertedY = LEVEL_BASE.length - y;
+                Coordinate coordinate = new Coordinate(x, invertedY);
+                terrainMap.put(coordinate, terrain);
+            }
+        }
+        
+        level.setTerrain(terrainMap);
+        return level;
+    }
+    
+    
 }
