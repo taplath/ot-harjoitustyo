@@ -1,6 +1,10 @@
 # COVIDHack21
 
-Sovellus on _roguelike_ peli, jossa pelaajan on tarkoitus hankkia COVID-rokotus läpäistäkseen pelin. 
+Sovellus on (keskeneräinen) _roguelike_ -peli, jossa pelaajan on tarkoitus hankkia COVID-rokotus läpäistäkseen pelin. 
+
+### Toteutuksen tila
+
+Pelin käynnistyessä peli lataa kartan ja piirtää sen ruudulle.
 
 ## Dokumentaatio
 
