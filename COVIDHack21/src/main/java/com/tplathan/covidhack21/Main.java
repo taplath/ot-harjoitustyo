@@ -8,9 +8,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
-        Gui gui = new Gui();
-        stage.setScene(gui.createScene());
-        stage.show();
+        Game game = new Game();
+        game.movePlayer(Direction.DOWN);
+        
+        System.out.println(game.getCurrentLevel().getPlayerCoordinate());
+        
+        //Gui gui = new Gui();
+        //stage.setScene(gui.createScene());
+        //stage.show();
     }
 
     public static void main(String[] args) {
