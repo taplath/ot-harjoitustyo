@@ -1,14 +1,24 @@
-# Ohjelmistotekniikka, harjoitustyö
+# COVIDHack21
 
-## Tehtävät
+Sovellus on _roguelike_ peli, jossa pelaajan on tarkoitus hankkia COVID-rokotus läpäistäkseen pelin. 
 
-### Viikko 1
+## Dokumentaatio
 
-[gitlog.txt](https://github.com/taplath/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[Vaatimusmäärittely](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[komentorivi.txt](https://github.com/taplath/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+[Työaikakirjanpito](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-[vaatimusmaarittely.md](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+## Komentorivitoiminnot
 
-[tuntikirjanpito.md](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+### Testaus
+
+Testit suoritetaan komennolla
+
+> mvn test
+
+Testikattavuusraportti luodaan komennolla
+
+> mvn jacoco:report
+
+Kattavuusraportti voidaan tarkastella avaamalla tiedosto _target/site/jacoco/index.html_
 
