@@ -4,7 +4,7 @@ Sovellus on (keskeneräinen) _roguelike_ -peli, jossa pelaajan on tarkoitus hank
 
 ### Toteutuksen tila
 
-Pelin käynnistyessä peli lataa kartan ja piirtää sen ruudulle.
+Pelin käynnistyessä peli piirtää kartan ruudulle.
 
 ## Dokumentaatio
 
