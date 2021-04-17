@@ -7,15 +7,17 @@ import static org.junit.Assert.*;
  *
  * @author plathant
  */
-
 public class LevelTest {
+    
+    public final int PLAYER_START_X = 2;
+    public final int PLAYER_START_Y = 2;
 
     @Test
-    public void playerAtOrigoAtStartOfLevel() {
+    public void playerAtStartPosition() {
         Level newLevel = new Level();
         Coordinate playerAtInit = newLevel.getPlayerCoordinate();
-        assertEquals(0, playerAtInit.getX());
-        assertEquals(0, playerAtInit.getY());
+        assertEquals(this.PLAYER_START_X, playerAtInit.getX());
+        assertEquals(this.PLAYER_START_Y, playerAtInit.getY());
     }
 
     @Test
@@ -23,16 +25,16 @@ public class LevelTest {
         Level newLevel = new Level();
         newLevel.movePlayer(Direction.RIGHT);
         Coordinate playerAfterMoveRight = newLevel.getPlayerCoordinate();
-        assertEquals(1, playerAfterMoveRight.getX());
-        assertEquals(0, playerAfterMoveRight.getY());
+        assertEquals(this.PLAYER_START_X + 1, playerAfterMoveRight.getX());
+        assertEquals(this.PLAYER_START_Y, playerAfterMoveRight.getY());
     }
 
     @Test
     public void playerMovesOnYAxis() {
         Level newLevel = new Level();
-        newLevel.movePlayer(Direction.UP);
+        newLevel.movePlayer(Direction.DOWN);
         Coordinate playerAfterMoveRight = newLevel.getPlayerCoordinate();
-        assertEquals(0, playerAfterMoveRight.getX());
-        assertEquals(1, playerAfterMoveRight.getY());
+        assertEquals(this.PLAYER_START_X, playerAfterMoveRight.getX());
+        assertEquals(this.PLAYER_START_Y + 1, playerAfterMoveRight.getY());
     }
 }
