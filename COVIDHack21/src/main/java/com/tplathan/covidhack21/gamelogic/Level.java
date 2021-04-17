@@ -1,4 +1,4 @@
-package gamelogic;
+package com.tplathan.covidhack21.gamelogic;
 
 import gamelogic.monsters.Monster;
 import java.util.ArrayList;

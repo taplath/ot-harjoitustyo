@@ -1,4 +1,4 @@
-package gamelogic;
+package com.tplathan.covidhack21.gamelogic;
 
 import java.util.HashMap;
 

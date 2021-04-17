@@ -1,9 +1,9 @@
 package com.tplathan.covidhack21.gui;
 
-import gamelogic.Coordinate;
-import gamelogic.Direction;
-import gamelogic.Game;
-import gamelogic.Level;
+import com.tplathan.covidhack21.gamelogic.Coordinate;
+import com.tplathan.covidhack21.gamelogic.Direction;
+import com.tplathan.covidhack21.gamelogic.Game;
+import com.tplathan.covidhack21.gamelogic.Level;
 import java.util.Iterator;
 import javafx.geometry.Pos;
 import javafx.scene.Node;

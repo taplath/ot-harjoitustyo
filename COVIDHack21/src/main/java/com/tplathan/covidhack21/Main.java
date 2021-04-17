@@ -1,7 +1,7 @@
 package com.tplathan.covidhack21;
 
 import com.tplathan.covidhack21.gui.Gui;
-import gamelogic.Game;
+import com.tplathan.covidhack21.gamelogic.Game;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

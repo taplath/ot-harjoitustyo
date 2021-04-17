@@ -1,4 +1,4 @@
-package gamelogic;
+package com.tplathan.covidhack21.gamelogic;
 
 public class TerrainType {
     private boolean isWall;
