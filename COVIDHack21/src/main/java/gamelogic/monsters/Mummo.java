@@ -1,7 +1,5 @@
 package gamelogic.monsters;
 
-import gamelogic.monsters.Action;
-
 public class Mummo implements Monster {
 
     @Override

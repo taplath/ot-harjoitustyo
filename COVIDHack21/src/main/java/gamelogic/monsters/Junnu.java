@@ -1,7 +1,5 @@
 package gamelogic.monsters;
 
-import gamelogic.monsters.Action;
-
 public class Junnu implements Monster {
 
     @Override
