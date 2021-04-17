@@ -4,6 +4,7 @@ import com.tplathan.covidhack21.Coordinate;
 import com.tplathan.covidhack21.Game;
 import com.tplathan.covidhack21.Level;
 import java.util.Iterator;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -34,6 +35,8 @@ public class Gui {
             Coordinate coordinate = e.getKey();
             char marker = e.getValue().getMarker();
             Label terrainLabel = new Label(marker + "");
+            terrainLabel.setMinWidth(12);
+            terrainLabel.setAlignment(Pos.CENTER);
             GridPane.setConstraints(terrainLabel, coordinate.getX(), coordinate.getY());
             this.levelPane.getChildren().add(terrainLabel);
         });
