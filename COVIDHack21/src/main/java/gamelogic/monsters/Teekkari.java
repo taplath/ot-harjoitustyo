@@ -1,19 +1,22 @@
-package com.tplathan.covidhack21.monsters;
+package gamelogic.monsters;
 
-import com.tplathan.covidhack21.monsters.Action;
+public class Teekkari implements Monster {
 
-public class Mummo implements Monster {
+    public Teekkari() {
+
+    }
 
     @Override
     public char character(char character) {
-        return 'M';
+        return 'T';
     }
 
     @Override
     public Boolean stationary(Boolean stationary) {
-        return true;
+        return false;
     }
 
+    //TODO: Action for force-selling Äpy
     @Override
     public void action(Action action) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

@@ -1,6 +1,6 @@
-package com.tplathan.covidhack21.monsters;
+package gamelogic.monsters;
 
-import com.tplathan.covidhack21.monsters.Action;
+import gamelogic.monsters.Action;
 
 public class Junnu implements Monster {
 

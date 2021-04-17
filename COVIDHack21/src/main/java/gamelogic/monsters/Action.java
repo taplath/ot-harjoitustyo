@@ -1,5 +1,5 @@
 
-package com.tplathan.covidhack21.monsters;
+package gamelogic.monsters;
 
 // TODO: Monster Action template
 public class Action {

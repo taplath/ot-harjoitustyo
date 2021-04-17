@@ -1,4 +1,4 @@
-package com.tplathan.covidhack21.monsters;
+package gamelogic.monsters;
 
 public interface Monster {
 

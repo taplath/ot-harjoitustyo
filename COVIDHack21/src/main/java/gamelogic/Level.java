@@ -1,6 +1,6 @@
 package com.tplathan.covidhack21;
 
-import com.tplathan.covidhack21.monsters.Monster;
+import gamelogic.monsters.Monster;
 import java.util.ArrayList;
 import java.util.HashMap;
 
