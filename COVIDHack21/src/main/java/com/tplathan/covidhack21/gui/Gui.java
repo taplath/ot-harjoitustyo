@@ -19,17 +19,17 @@ public class Gui {
     public Gui(Game game) {
         this.game = game;
         this.levelPane = new GridPane();
-        this.scene = new Scene(levelPane, 640, 480);
+        this.scene = new Scene(levelPane, 1024, 768);
     }
     
     public Scene getScene() {
         return this.scene;
     }
     
-    public void drawLevel() {
+public void drawLevel() {
         this.levelPane.getChildren().clear();
         Level level = this.game.getCurrentLevel();
-        
+       
         // Draw terrain
         level.getTerrain().entrySet().stream().forEach(e -> {
             Coordinate coordinate = e.getKey();
@@ -40,7 +40,7 @@ public class Gui {
             GridPane.setConstraints(terrainLabel, coordinate.getX(), coordinate.getY());
             this.levelPane.getChildren().add(terrainLabel);
         });
-        
+       
         // Draw Player
         Coordinate playerCoord = level.getPlayerCoordinate();
         // Remove terrain label from player coord
@@ -55,7 +55,29 @@ public class Gui {
         }
         // Add player label to player coord
         Label playerLabel = new Label("@");
+        playerLabel.setMinWidth(12);
+        playerLabel.setAlignment(Pos.CENTER);
         GridPane.setConstraints(playerLabel, playerCoord.getX(), playerCoord.getY());
-        this.levelPane.getChildren().add(playerLabel);   
+        this.levelPane.getChildren().add(playerLabel);  
+       
+        // Draw Staircase
+        // TODO: Repetition refactoring
+        Coordinate staircaseCoord = level.getStaircaseCoordinate();
+        // Remove terrain label from staircase coord
+        Iterator<Node> childIterator2 = this.levelPane.getChildren().iterator();
+        while (childIterator2.hasNext()) {
+            Node node = childIterator2.next();
+            int x = GridPane.getColumnIndex(node);
+            int y = GridPane.getRowIndex(node);
+            if (x == staircaseCoord.getX() && y == staircaseCoord.getY()) {
+                childIterator2.remove();
+            }
+        }
+        // Add player label to player coord
+        Label staircaseLabel = new Label(">");
+        staircaseLabel.setMinWidth(12);
+        staircaseLabel.setAlignment(Pos.CENTER);
+        GridPane.setConstraints(staircaseLabel, staircaseCoord.getX(), staircaseCoord.getY());
+        this.levelPane.getChildren().add(staircaseLabel);  
     }
 }
