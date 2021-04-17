@@ -1,6 +1,7 @@
 package com.tplathan.covidhack21.gui;
 
 import com.tplathan.covidhack21.Coordinate;
+import com.tplathan.covidhack21.Direction;
 import com.tplathan.covidhack21.Game;
 import com.tplathan.covidhack21.Level;
 import java.util.Iterator;
@@ -20,6 +21,24 @@ public class Gui {
         this.game = game;
         this.levelPane = new GridPane();
         this.scene = new Scene(levelPane, 1024, 768);
+        
+        this.scene.setOnKeyPressed(evt -> {
+            switch (evt.getCode()) {
+                case UP:
+                    game.movePlayer(Direction.UP);
+                    break;
+                case DOWN:
+                    game.movePlayer(Direction.DOWN);
+                    break;
+                case LEFT:
+                    game.movePlayer(Direction.LEFT);
+                    break;
+                case RIGHT:
+                    game.movePlayer(Direction.RIGHT);
+                    break;
+            }
+            drawLevel();
+        });
     }
     
     public Scene getScene() {
