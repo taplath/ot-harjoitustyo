@@ -14,7 +14,7 @@ public class Level {
     public Level() {
         this.terrain = new HashMap<>();
         this.monsters = new ArrayList<>();
-        this.playerCoordinate = new Coordinate(0, 0);
+        this.playerCoordinate = new Coordinate(2, 2);
         // Actual coordinate TBD
         this.staircaseCoordinate = new Coordinate(10, 10);
     }

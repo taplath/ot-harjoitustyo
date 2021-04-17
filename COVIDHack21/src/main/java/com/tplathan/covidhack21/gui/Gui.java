@@ -3,6 +3,8 @@ package com.tplathan.covidhack21.gui;
 import com.tplathan.covidhack21.Coordinate;
 import com.tplathan.covidhack21.Game;
 import com.tplathan.covidhack21.Level;
+import java.util.Iterator;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -35,6 +37,22 @@ public class Gui {
             GridPane.setConstraints(terrainLabel, coordinate.getX(), coordinate.getY());
             this.levelPane.getChildren().add(terrainLabel);
         });
-                
+        
+        // Draw Player
+        Coordinate playerCoord = level.getPlayerCoordinate();
+        // Remove terrain label from player coord
+        Iterator<Node> childIterator = this.levelPane.getChildren().iterator();
+        while (childIterator.hasNext()) {
+            Node node = childIterator.next();
+            int x = GridPane.getColumnIndex(node);
+            int y = GridPane.getRowIndex(node);
+            if (x == playerCoord.getX() && y == playerCoord.getY()) {
+                childIterator.remove();
+            }
+        }
+        // Add player label to player coord
+        Label playerLabel = new Label("@");
+        GridPane.setConstraints(playerLabel, playerCoord.getX(), playerCoord.getY());
+        this.levelPane.getChildren().add(playerLabel);   
     }
 }
