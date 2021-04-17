@@ -1,4 +1,4 @@
-package com.tplathan.covidhack21;
+package com.tplathan.covidhack21.gamelogic;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
