@@ -1,15 +1,15 @@
-package gamelogic.monsters;
+package com.tplathan.covidhack21.gamelogic.monsters;
 
-public class Mummo implements Monster {
+public class Junnu implements Monster {
 
     @Override
     public char character(char character) {
-        return 'M';
+        return 'J';
     }
 
     @Override
     public Boolean stationary(Boolean stationary) {
-        return true;
+        return false;
     }
 
     @Override

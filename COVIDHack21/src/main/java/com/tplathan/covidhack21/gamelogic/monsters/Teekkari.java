@@ -1,10 +1,14 @@
-package gamelogic.monsters;
+package com.tplathan.covidhack21.gamelogic.monsters;
 
-public class Junnu implements Monster {
+public class Teekkari implements Monster {
+
+    public Teekkari() {
+
+    }
 
     @Override
     public char character(char character) {
-        return 'J';
+        return 'T';
     }
 
     @Override
@@ -12,6 +16,7 @@ public class Junnu implements Monster {
         return false;
     }
 
+    //TODO: Action for force-selling Äpy
     @Override
     public void action(Action action) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
