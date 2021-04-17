@@ -6,6 +6,9 @@ Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on
 ## Pelin yleiskuva ja perustoiminnallisuuksia
 - Peli on *roguelike*
 - Ennalta määritellyt peliruudut eli tasot, joihin pelaaja etenee taso kerrallaan
+- [x] Peli piirtää ensimmäisen tason ja ruudun josta voi siirtyä seuraavalle tasolle
+- [x] Pelissä voi liikuttaa pelaajahahmoa
+- [ ] Pelissä voi siirtyä seuraavalle tasolle
 - Useita erilaisia "hirviöitä", jotka voivat auttaa tai haitata pelaajan etenemistä pelissä
 - Pelissä ei taistella fyysisesti 
    - Pelaajan kestopisteiden sijaan pelaajalla on kriisinsietokykypisteet (KSKP)
