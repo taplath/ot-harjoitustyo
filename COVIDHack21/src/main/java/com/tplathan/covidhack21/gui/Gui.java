@@ -92,7 +92,7 @@ public void drawLevel() {
                 childIterator2.remove();
             }
         }
-        // Add player label to player coord
+        // Add staircase label to staircase coord
         Label staircaseLabel = new Label(">");
         staircaseLabel.setMinWidth(12);
         staircaseLabel.setAlignment(Pos.CENTER);
