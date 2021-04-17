@@ -8,4 +8,4 @@
 | 10.4.2021 | 4 | Projektin suunnittelua |
 | 11.4.2021 | 9 | Merkittäviä lisäyksiä koodipohjaan |
 | 16.4.2021 | 1 | Projektin suunnittelua |
-| 17.4.2021 | ? | tbd |
+| 17.4.2021 | 4 | Pelaajan liikkuminen ruudulla |
