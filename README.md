@@ -14,6 +14,10 @@ Pelin käynnistyessä peli avaa (keskeneräisen) _main menun_, jossa nappia pain
 
 [Arkkitehtuurikuvaus](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+## Release
+
+[Viikko 5] (https://github.com/taplath/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 
 ### Suoritettavan JAR-tiedoston luominen
