@@ -20,7 +20,7 @@ public class Level {
         // Actual coordinate TBD
         this.staircaseCoordinate = new Coordinate(10, 10);
     }
-    
+
     public String getName() {
         return this.name;
     }
@@ -35,9 +35,15 @@ public class Level {
 
     public void movePlayer(Direction direction) {
         int newPlayerX = this.playerCoordinate.getX() + direction.x;
-        this.playerCoordinate.setX(newPlayerX);
-
         int newPlayerY = this.playerCoordinate.getY() + direction.y;
+
+        //Don't allow moving to a wall
+        TerrainType terrainAtNewCoord = this.terrain.get(new Coordinate(newPlayerX, newPlayerY));
+        if (terrainAtNewCoord.isWall()) {
+            return;
+        }
+
+        this.playerCoordinate.setX(newPlayerX);
         this.playerCoordinate.setY(newPlayerY);
     }
 
