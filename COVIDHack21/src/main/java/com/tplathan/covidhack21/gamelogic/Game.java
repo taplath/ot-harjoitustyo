@@ -11,13 +11,17 @@ public class Game {
     private Player player;
 
     public Game() {
+        this.initNewGame();
+    }
+
+    public void initNewGame() {
         this.isWon = false;
         this.isLost = false;
         this.player = new Player();
         this.levels = new ArrayList<>();
         this.levels.add(LevelLoader.firstLevel());
         this.levels.add(LevelLoader.secondLevel());
-
+        this.currentLevelIndex = 0;
     }
 
     public boolean isWon() {

@@ -42,16 +42,31 @@ public class Gui {
                     game.movePlayer(Direction.RIGHT);
                     break;
             }
-            this.drawLevel();
+
+            // Placeholder messages
+            if (this.game.isWon()) {
+                this.showMenu("Voitit pelin!");
+            } else if (this.game.isLost()) {
+                this.showMenu("Hävisit pelin!");
+            } else {
+                this.drawLevel();
+            }
         });
 
         this.stage.setScene(this.menuView.getScene());
         this.stage.show();
         this.drawLevel();
     }
-    
+
     public void startNewGame() {
+        this.game.initNewGame();
+        this.drawLevel();
         this.stage.setScene(this.levelView.getScene());
+    }
+
+    private void showMenu(String message) {
+        this.menuView.setMessage(message);
+        this.stage.setScene(this.menuView.getScene());
     }
 
     public void drawLevel() {
