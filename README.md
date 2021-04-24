@@ -28,3 +28,8 @@ Testikattavuusraportti luodaan komennolla
 
 Kattavuusraportti voidaan tarkastella avaamalla tiedosto _target/site/jacoco/index.html_
 
+Checkstyle-raportti luodaan komennolla
+
+> mvn jxr:jxr checkstyle:checkstyle
+
+Checkstyle-raportti voidaan tarkastella avaamalla tiedosto _target/site/checkstyle.html_
