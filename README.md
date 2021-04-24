@@ -12,6 +12,8 @@ Pelin käynnistyessä peli piirtää kartan ruudulle.
 
 [Työaikakirjanpito](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[Arkkitehtuurikuvaus](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ## Komentorivitoiminnot
 
 ### Testaus
