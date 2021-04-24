@@ -18,17 +18,21 @@ Pelin käynnistyessä peli piirtää kartan ruudulle.
 
 ### Testaus
 
-- Testit suoritetaan komennolla
+Testit suoritetaan komennolla
 
 > mvn test
 
-- Testikattavuusraportti luodaan komennolla
+---
+
+Testikattavuusraportti luodaan komennolla
 
 > mvn jacoco:report
 
 Kattavuusraportti voidaan tarkastella avaamalla tiedosto _target/site/jacoco/index.html_
 
-- Checkstyle-raportti luodaan komennolla
+---
+
+Checkstyle-raportti luodaan komennolla
 
 > mvn jxr:jxr checkstyle:checkstyle
 
