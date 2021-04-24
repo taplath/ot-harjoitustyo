@@ -42,7 +42,7 @@ public class Level {
 
         //Don't allow moving to a wall
         TerrainType terrainAtNewCoordinate = this.terrain.get(new Coordinate(newPlayerX, newPlayerY));
-        if (terrainAtNewCoordinate.isWall()) {
+        if (terrainAtNewCoordinate == null || terrainAtNewCoordinate.isWall()) {
             return;
         }
         // If moving to a monster, perform action instead
