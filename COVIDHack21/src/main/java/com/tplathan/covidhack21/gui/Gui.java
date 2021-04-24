@@ -17,6 +17,7 @@ public class Gui {
 
     private Game game;
     private LevelView levelView;
+    private MenuView menuView;
     private Stage stage;
 
     public Gui(Game game, Stage stage) {
@@ -24,6 +25,7 @@ public class Gui {
         this.stage = stage;
 
         this.levelView = new LevelView();
+        this.menuView = new MenuView(this);
 
         this.levelView.getScene().setOnKeyPressed(evt -> {
             switch (evt.getCode()) {
@@ -43,9 +45,13 @@ public class Gui {
             this.drawLevel();
         });
 
-        this.stage.setScene(levelView.getScene());
+        this.stage.setScene(this.menuView.getScene());
         this.stage.show();
         this.drawLevel();
+    }
+    
+    public void startNewGame() {
+        this.stage.setScene(this.levelView.getScene());
     }
 
     public void drawLevel() {
