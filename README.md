@@ -4,7 +4,7 @@ Sovellus on (keskeneräinen) _roguelike_ -peli, jossa pelaajan on tarkoitus hank
 
 ### Toteutuksen tila
 
-Pelin käynnistyessä peli piirtää kartan ruudulle.
+Pelin käynnistyessä peli avaa (keskeneräisen) _main menun_, jossa nappia painamalla voi aloittaa uuden pelin. Peli piirtää ruudulle kartan, pelaajan ja portaat seuraavalle tasolle.
 
 ## Dokumentaatio
 
