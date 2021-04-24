@@ -39,7 +39,7 @@ public class LevelLoader {
         "################################################################################".toCharArray()};
 
     public static Level firstLevel() {
-        Level level = new Level();
+        Level level = new Level("Level 1");
         
         HashMap<Coordinate, TerrainType> terrainMap = new HashMap<>();
         for (int y = 0; y < LEVEL_BASE.length; y++) {

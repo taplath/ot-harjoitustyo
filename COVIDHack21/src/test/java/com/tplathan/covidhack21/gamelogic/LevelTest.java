@@ -14,7 +14,7 @@ public class LevelTest {
 
     @Test
     public void playerAtStartPosition() {
-        Level newLevel = new Level();
+        Level newLevel = new Level("");
         Coordinate playerAtInit = newLevel.getPlayerCoordinate();
         assertEquals(this.PLAYER_START_X, playerAtInit.getX());
         assertEquals(this.PLAYER_START_Y, playerAtInit.getY());
@@ -22,7 +22,7 @@ public class LevelTest {
 
     @Test
     public void playerMovesOnXAxis() {
-        Level newLevel = new Level();
+        Level newLevel = new Level("");
         newLevel.movePlayer(Direction.RIGHT);
         Coordinate playerAfterMoveRight = newLevel.getPlayerCoordinate();
         assertEquals(this.PLAYER_START_X + 1, playerAfterMoveRight.getX());
@@ -31,7 +31,7 @@ public class LevelTest {
 
     @Test
     public void playerMovesOnYAxis() {
-        Level newLevel = new Level();
+        Level newLevel = new Level("");
         newLevel.movePlayer(Direction.DOWN);
         Coordinate playerAfterMoveRight = newLevel.getPlayerCoordinate();
         assertEquals(this.PLAYER_START_X, playerAfterMoveRight.getX());

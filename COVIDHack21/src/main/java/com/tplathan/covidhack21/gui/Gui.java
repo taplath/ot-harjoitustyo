@@ -9,18 +9,30 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
 public class Gui {
     
     private Game game;
     private GridPane levelPane;
+    private GridPane infoPane;
+    private Label statusText;
     private Scene scene;
+    private BorderPane bp;
     
     public Gui(Game game) {
         this.game = game;
         this.levelPane = new GridPane();
-        this.scene = new Scene(levelPane, 1024, 768);
+        this.infoPane = new GridPane();
+        this.statusText = new Label();
+        
+        this.bp = new BorderPane();
+        this.bp.setCenter(this.levelPane);
+        this.bp.setBottom(this.infoPane);
+        this.bp.setTop(this.statusText);
+        
+        this.scene = new Scene(this.bp, 1024, 768);
         
         this.scene.setOnKeyPressed(evt -> {
             switch (evt.getCode()) {
@@ -48,6 +60,11 @@ public class Gui {
 public void drawLevel() {
         this.levelPane.getChildren().clear();
         Level level = this.game.getCurrentLevel();
+        
+        //Draw infopane
+        
+        this.infoPane.getChildren().clear();
+        this.infoPane.add(new Label(level.getName()),0,0);
        
         // Draw terrain
         level.getTerrain().entrySet().stream().forEach(e -> {

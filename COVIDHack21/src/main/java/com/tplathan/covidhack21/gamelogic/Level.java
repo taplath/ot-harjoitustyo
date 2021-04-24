@@ -10,13 +10,19 @@ public class Level {
     private ArrayList<Monster> monsters;
     private Coordinate playerCoordinate;
     private Coordinate staircaseCoordinate;
+    private String name;
 
-    public Level() {
+    public Level(String name) {
+        this.name = name;
         this.terrain = new HashMap<>();
         this.monsters = new ArrayList<>();
         this.playerCoordinate = new Coordinate(2, 2);
         // Actual coordinate TBD
         this.staircaseCoordinate = new Coordinate(10, 10);
+    }
+    
+    public String getName() {
+        return this.name;
     }
 
     public boolean isWon() {
