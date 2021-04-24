@@ -24,6 +24,8 @@ Komennolla
 
 luodaan hakemistoon _target_ jar-tiedosto _covidhack21-1.0-SNAPSHOT.jar_
 
+---
+
 JAR-tiedosto ajetaan komennolla 
 
 > _java -jar covidhack21-1.0-SNAPSHOT.jar_
