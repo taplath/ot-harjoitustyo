@@ -10,6 +10,7 @@ public class Level {
     private Coordinate playerCoordinate;
     private Coordinate staircaseCoordinate;
     private String name;
+    private String activeStatusText;
 
     public Level(String name) {
         this.name = name;
@@ -35,11 +36,19 @@ public class Level {
     public void movePlayer(Direction direction) {
         int newPlayerX = this.playerCoordinate.getX() + direction.x;
         int newPlayerY = this.playerCoordinate.getY() + direction.y;
+        Coordinate newPlayerCoordinate = new Coordinate(newPlayerX, newPlayerY);
+        // Clear current status text
+        this.activeStatusText = null;
 
         //Don't allow moving to a wall
-        TerrainType terrainAtNewCoord = this.terrain.get(new Coordinate(newPlayerX, newPlayerY));
-        if (terrainAtNewCoord.isWall()) {
+        TerrainType terrainAtNewCoordinate = this.terrain.get(new Coordinate(newPlayerX, newPlayerY));
+        if (terrainAtNewCoordinate.isWall()) {
             return;
+        }
+        // If moving to a monster, perform action instead
+        if (this.monsters.containsKey(newPlayerCoordinate)) {
+            Monster monster = this.monsters.get(newPlayerCoordinate);
+            this.activeStatusText = monster.getAction().getStatusText();
         }
 
         this.playerCoordinate.setX(newPlayerX);
@@ -65,8 +74,12 @@ public class Level {
     public void addMonster(Coordinate location, Monster monster) {
         this.monsters.put(location, monster);
     }
-    
+
     public HashMap<Coordinate, Monster> getMonsters() {
         return this.monsters;
+    }
+    
+    public String getActiveStatusText() {
+        return this.activeStatusText;
     }
 }

@@ -13,7 +13,7 @@ public class Junnu implements Monster {
     }
 
     @Override
-    public void action(Action action) {
+    public Action getAction() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

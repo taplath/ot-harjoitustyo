@@ -6,6 +6,6 @@ public interface Monster {
 
     Boolean stationary(Boolean stationary);
 
-    void action(Action action);
+    Action getAction();
 
 }

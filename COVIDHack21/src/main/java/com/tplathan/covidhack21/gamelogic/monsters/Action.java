@@ -1,7 +1,15 @@
-
 package com.tplathan.covidhack21.gamelogic.monsters;
 
-// TODO: Monster Action template
 public class Action {
-    
+
+    private String statusText;
+
+    public Action(String statusText) {
+        this.statusText = statusText;
+    }
+
+    public String getStatusText() {
+        return this.statusText;
+    }
+
 }

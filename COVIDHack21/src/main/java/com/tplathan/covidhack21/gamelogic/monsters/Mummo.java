@@ -1,6 +1,12 @@
 package com.tplathan.covidhack21.gamelogic.monsters;
 
 public class Mummo implements Monster {
+    
+    private Action action;
+    
+    public Mummo() {
+        this.action = new Action("Mummo höpisee polvivaivoista.");
+    }
 
     @Override
     public char getCharacter() {
@@ -13,8 +19,8 @@ public class Mummo implements Monster {
     }
 
     @Override
-    public void action(Action action) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Action getAction() {
+        return this.action;
     }
 
 }

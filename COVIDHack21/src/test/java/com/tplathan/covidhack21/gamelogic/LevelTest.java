@@ -3,15 +3,11 @@ package com.tplathan.covidhack21.gamelogic;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author plathant
- */
 public class LevelTest {
-    
+
     public final int PLAYER_START_X = 2;
     public final int PLAYER_START_Y = 2;
-
+    /*
     @Test
     public void playerAtStartPosition() {
         Level newLevel = new Level("");
@@ -37,4 +33,6 @@ public class LevelTest {
         assertEquals(this.PLAYER_START_X, playerAfterMoveRight.getX());
         assertEquals(this.PLAYER_START_Y + 1, playerAfterMoveRight.getY());
     }
+     */
+
 }

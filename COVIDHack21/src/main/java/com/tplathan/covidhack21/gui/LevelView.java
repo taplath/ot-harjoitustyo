@@ -3,9 +3,7 @@ package com.tplathan.covidhack21.gui;
 import com.tplathan.covidhack21.gamelogic.Coordinate;
 import com.tplathan.covidhack21.gamelogic.Level;
 import com.tplathan.covidhack21.gamelogic.monsters.Monster;
-import java.util.Iterator;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -42,6 +40,9 @@ public class LevelView {
         // Draw infopane        
         this.infoPane.getChildren().clear();
         this.infoPane.add(new Label(level.getName()), 0, 0);
+        
+        // Draw status text
+        this.statusText.setText(level.getActiveStatusText());
 
         // Loop through terrain mapping
         level.getTerrain().entrySet().stream().forEach(e -> {
