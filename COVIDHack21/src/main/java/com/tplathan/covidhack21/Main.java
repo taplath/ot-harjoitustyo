@@ -10,14 +10,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         Game game = new Game();
-        
-        Gui gui = new Gui(game);
-        
-        stage.setScene(gui.getScene());
-        
-        stage.show();
-        
-        gui.drawLevel();
+        Gui gui = new Gui(game, stage);
     }
 
     public static void main(String[] args) {
