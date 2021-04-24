@@ -1,5 +1,6 @@
 package com.tplathan.covidhack21.gamelogic;
 
+import com.tplathan.covidhack21.gamelogic.monsters.Mummo;
 import java.util.HashMap;
 
 public class LevelLoader {
@@ -83,6 +84,9 @@ public class LevelLoader {
         }
         
         level.setTerrain(terrainMap);
+        
+        level.addMonster(new Coordinate(4, 4), new Mummo());
+        
         return level;
     }
     

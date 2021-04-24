@@ -1,13 +1,12 @@
 package com.tplathan.covidhack21.gamelogic;
 
 import com.tplathan.covidhack21.gamelogic.monsters.Monster;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Level {
 
     private HashMap<Coordinate, TerrainType> terrain;
-    private ArrayList<Monster> monsters;
+    private HashMap<Coordinate, Monster> monsters;
     private Coordinate playerCoordinate;
     private Coordinate staircaseCoordinate;
     private String name;
@@ -15,7 +14,7 @@ public class Level {
     public Level(String name) {
         this.name = name;
         this.terrain = new HashMap<>();
-        this.monsters = new ArrayList<>();
+        this.monsters = new HashMap<>();
         this.playerCoordinate = new Coordinate(2, 2);
         // Actual coordinate TBD
         this.staircaseCoordinate = new Coordinate(10, 10);
@@ -61,5 +60,13 @@ public class Level {
 
     public Coordinate getStaircaseCoordinate() {
         return this.staircaseCoordinate;
+    }
+
+    public void addMonster(Coordinate location, Monster monster) {
+        this.monsters.put(location, monster);
+    }
+    
+    public HashMap<Coordinate, Monster> getMonsters() {
+        return this.monsters;
     }
 }

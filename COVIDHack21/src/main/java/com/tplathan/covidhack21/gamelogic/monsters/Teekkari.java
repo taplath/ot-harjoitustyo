@@ -7,7 +7,7 @@ public class Teekkari implements Monster {
     }
 
     @Override
-    public char character(char character) {
+    public char getCharacter() {
         return 'T';
     }
 

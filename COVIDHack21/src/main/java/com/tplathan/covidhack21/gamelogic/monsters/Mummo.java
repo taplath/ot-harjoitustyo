@@ -3,7 +3,7 @@ package com.tplathan.covidhack21.gamelogic.monsters;
 public class Mummo implements Monster {
 
     @Override
-    public char character(char character) {
+    public char getCharacter() {
         return 'M';
     }
 
