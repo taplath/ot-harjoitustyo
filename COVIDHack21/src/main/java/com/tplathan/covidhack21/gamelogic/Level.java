@@ -3,6 +3,12 @@ package com.tplathan.covidhack21.gamelogic;
 import com.tplathan.covidhack21.gamelogic.monsters.Monster;
 import java.util.HashMap;
 
+/**
+ * Represents a single level and maintains the current state (what's the terrain
+ * like, where are the monsters, where's the player etc)
+ *
+ * @author Tapani Plathan
+ */
 public class Level {
 
     private HashMap<Coordinate, TerrainType> terrain;
@@ -12,6 +18,10 @@ public class Level {
     private String name;
     private String activeStatusText;
 
+    /**
+     *
+     * @param name is displayed to the player when they reach the level.
+     */
     public Level(String name) {
         this.name = name;
         this.terrain = new HashMap<>();
@@ -25,15 +35,23 @@ public class Level {
         return this.name;
     }
 
+    /**
+     *
+     * @return true if the player has reached the staircase.
+     */
     public boolean isWon() {
         return this.playerCoordinate.equals(this.staircaseCoordinate);
     }
 
+    /**
+     *
+     * @return true if the player sanity goes to zero.
+     */
     public boolean isLost() {
         return false;
     }
 
-    public void movePlayer(Direction direction) {
+    protected void movePlayer(Direction direction) {
         int newPlayerX = this.playerCoordinate.getX() + direction.x;
         int newPlayerY = this.playerCoordinate.getY() + direction.y;
         Coordinate newPlayerCoordinate = new Coordinate(newPlayerX, newPlayerY);
@@ -71,6 +89,12 @@ public class Level {
         return this.staircaseCoordinate;
     }
 
+    /**
+     * Adds a monster to a given location on the map.
+     *
+     * @param location
+     * @param monster
+     */
     public void addMonster(Coordinate location, Monster monster) {
         this.monsters.put(location, monster);
     }
@@ -78,7 +102,7 @@ public class Level {
     public HashMap<Coordinate, Monster> getMonsters() {
         return this.monsters;
     }
-    
+
     public String getActiveStatusText() {
         return this.activeStatusText;
     }

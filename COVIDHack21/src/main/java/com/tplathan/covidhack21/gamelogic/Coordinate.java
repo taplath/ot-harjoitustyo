@@ -1,10 +1,20 @@
 package com.tplathan.covidhack21.gamelogic;
 
+/**
+ * Coordinate represents a single location on the map
+ *
+ * @author Tapani Plathan
+ */
 public class Coordinate {
 
     private int x;
     private int y;
 
+    /**
+     *
+     * @param x Horizontal axis
+     * @param y Vertical axis
+     */
     public Coordinate(int x, int y) {
         this.x = x;
         this.y = y;
