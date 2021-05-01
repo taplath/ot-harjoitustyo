@@ -20,6 +20,12 @@ Pelin käynnistyessä peli avaa (keskeneräisen) _main menun_, jossa nappia pain
 
 ## Komentorivitoiminnot
 
+### Ohjelman ajaminen komentoriviltä
+
+Ohjelma ajentaan komentoriviltä komennolla
+
+> mvn compile exec:java -Dexec.mainClass=com.tplathan.covidhack21.Main
+
 ### Suoritettavan JAR-tiedoston luominen
 
 Komennolla
