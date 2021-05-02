@@ -15,15 +15,15 @@ public class CoordinateTest {
         assertTrue(dirs.contains(Direction.DOWN));
         assertTrue(dirs.contains(Direction.RIGHT));
     }
-    
-        @Test
+
+    @Test
     public void testGetDirectionTowardsTopLeft() {
         Coordinate initial = new Coordinate(100, 100);
         Coordinate target = new Coordinate(2, 2);
         ArrayList<Direction> dirs = initial.getDirectionTowards(target);
         assertEquals(2, dirs.size());
-        assertTrue(dirs.contains(Direction.DOWN));
-        assertTrue(dirs.contains(Direction.RIGHT));
+        assertTrue(dirs.contains(Direction.UP));
+        assertTrue(dirs.contains(Direction.LEFT));
     }
 
     @Test
