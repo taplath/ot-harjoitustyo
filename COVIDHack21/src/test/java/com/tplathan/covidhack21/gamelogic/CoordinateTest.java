@@ -7,9 +7,19 @@ import static org.junit.Assert.*;
 public class CoordinateTest {
 
     @Test
-    public void testGetDiretionTowars() {
+    public void testGetDirectionTowardsDownRight() {
         Coordinate initial = new Coordinate(2, 2);
         Coordinate target = new Coordinate(100, 100);
+        ArrayList<Direction> dirs = initial.getDirectionTowards(target);
+        assertEquals(2, dirs.size());
+        assertTrue(dirs.contains(Direction.DOWN));
+        assertTrue(dirs.contains(Direction.RIGHT));
+    }
+    
+        @Test
+    public void testGetDirectionTowardsTopLeft() {
+        Coordinate initial = new Coordinate(100, 100);
+        Coordinate target = new Coordinate(2, 2);
         ArrayList<Direction> dirs = initial.getDirectionTowards(target);
         assertEquals(2, dirs.size());
         assertTrue(dirs.contains(Direction.DOWN));
