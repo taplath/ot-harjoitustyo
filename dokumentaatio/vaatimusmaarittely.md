@@ -10,6 +10,8 @@ Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on
   - [x] Pelissä voi liikuttaa pelaajahahmoa - tehty
   - [x] Pelissä voi siirtyä seuraavalle tasolle
 - Useita erilaisia "hirviöitä", jotka voivat auttaa tai haitata pelaajan etenemistä pelissä
+  - [x] Hirviö liikkuu ja häiritsee pelaajan etenemistä
+  - [ ] Hirviö liikkuu ja auttaa pelaajan etenemistä
 - Pelissä ei taistella fyysisesti 
    - Pelaajan kestopisteiden sijaan pelaajalla on kriisinsietokykypisteet (KSKP)
 - Pelin voi voittaa saamalla COVID-rokotuksen viimeisellä tasolla
