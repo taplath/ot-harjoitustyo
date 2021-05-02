@@ -1,6 +1,7 @@
 package com.tplathan.covidhack21.gamelogic;
 
 import com.tplathan.covidhack21.gamelogic.monsters.Monster;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -61,16 +62,38 @@ public class Level {
         //Don't allow moving to a wall
         TerrainType terrainAtNewCoordinate = this.terrain.get(new Coordinate(newPlayerX, newPlayerY));
         if (terrainAtNewCoordinate == null || terrainAtNewCoordinate.isWall()) {
-            return;
-        }
-        // If moving to a monster, perform action instead
-        if (this.monsters.containsKey(newPlayerCoordinate)) {
+            // Do nothing
+        } else if (this.monsters.containsKey(newPlayerCoordinate)) {
+            // If moving to a monster, perform action instead
             Monster monster = this.monsters.get(newPlayerCoordinate);
             this.activeStatusText = monster.getAction().getStatusText();
+        } else {
+            this.playerCoordinate.setX(newPlayerX);
+            this.playerCoordinate.setY(newPlayerY);
         }
+    }
 
-        this.playerCoordinate.setX(newPlayerX);
-        this.playerCoordinate.setY(newPlayerY);
+    protected void moveMonsters() {
+        HashMap<Coordinate, Monster> newLocations = new HashMap<>();
+        this.monsters.entrySet().forEach(entry -> {
+            Coordinate monsterCoordinate = entry.getKey();
+            Monster monster = entry.getValue();
+
+            if (monster.isStationary()) {
+                newLocations.put(monsterCoordinate, monster);
+            } else {
+                ArrayList<Direction> directions = monsterCoordinate.getDirectionTowards(this.getPlayerCoordinate());
+                for (Direction dir : directions) {
+                    Coordinate newCoord = monsterCoordinate.getAdjacent(dir);
+                    if (this.isEmpty(newCoord)) {
+                        newLocations.put(newCoord, monster);
+                        return;
+                    }
+                }
+                newLocations.put(monsterCoordinate, monster);
+            }
+        });
+        this.monsters = newLocations;
     }
 
     public Coordinate getPlayerCoordinate() {
@@ -105,5 +128,21 @@ public class Level {
 
     public String getActiveStatusText() {
         return this.activeStatusText;
+    }
+
+    private boolean isEmpty(Coordinate coord) {
+        if (terrain.get(coord).isWall()) {
+            return false;
+        }
+        if (this.monsters.containsKey(coord)) {
+            return false;
+        }
+        if (coord.equals(this.getPlayerCoordinate())) {
+            return false;
+        }
+        if (coord.equals(this.getStaircaseCoordinate())) {
+            return false;
+        }
+        return true;
     }
 }

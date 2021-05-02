@@ -35,11 +35,6 @@ public class Game {
     public void movePlayer(Direction direction) {
         this.getCurrentLevel().movePlayer(direction);
 
-        if (this.getCurrentLevel().isLost()) {
-            this.isLost = true;
-            return;
-        }
-
         if (getCurrentLevel().isWon()) {
             if (this.currentLevelIndex == this.levels.size() - 1) {
                 this.isWon = true;
@@ -47,6 +42,13 @@ public class Game {
                 this.currentLevelIndex++;
             }
         }
+
+        this.getCurrentLevel().moveMonsters();
+
+        if (this.getCurrentLevel().isLost()) {
+            this.isLost = true;
+        }
+
     }
 
     public Level getCurrentLevel() {

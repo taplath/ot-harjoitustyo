@@ -8,12 +8,12 @@ public class Junnu implements Monster {
     }
 
     @Override
-    public Boolean stationary(Boolean stationary) {
+    public boolean isStationary() {
         return false;
     }
 
     @Override
     public Action getAction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new Action("Junnudevaaja: Voitko auttaa mua null pointer exceptionien kanssa?");
     }
 }

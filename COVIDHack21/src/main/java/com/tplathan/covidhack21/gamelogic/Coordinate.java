@@ -1,5 +1,7 @@
 package com.tplathan.covidhack21.gamelogic;
 
+import java.util.ArrayList;
+
 /**
  * Coordinate represents a single location on the map
  *
@@ -34,6 +36,25 @@ public class Coordinate {
 
     public void setY(int newY) {
         this.y = newY;
+    }
+
+    protected Coordinate getAdjacent(Direction direction) {
+        return new Coordinate(this.x + direction.x, this.y + direction.y);
+    }
+
+    protected ArrayList<Direction> getDirectionTowards(Coordinate target) {
+        ArrayList<Direction> dirs = new ArrayList<>();
+        if (target.x > this.x) {
+            dirs.add(Direction.RIGHT);
+        } else if (target.x < this.x) {
+            dirs.add(Direction.LEFT);
+        }
+        if (target.y > this.y) {
+            dirs.add(Direction.DOWN);
+        } else if (target.y < this.y) {
+            dirs.add(Direction.UP);
+        }
+        return dirs;
     }
 
     @Override

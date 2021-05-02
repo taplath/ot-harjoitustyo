@@ -27,7 +27,7 @@ public class LevelView {
         this.bp.setBottom(this.infoPane);
         this.bp.setTop(this.statusText);
         
-        this.scene = new Scene(this.bp, 1024, 768);
+        this.scene = new Scene(this.bp);
     }
     
     public Scene getScene() {

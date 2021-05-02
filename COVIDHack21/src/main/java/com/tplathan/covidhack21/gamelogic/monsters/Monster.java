@@ -4,7 +4,7 @@ public interface Monster {
 
     char getCharacter();
 
-    Boolean stationary(Boolean stationary);
+    boolean isStationary();
 
     Action getAction();
 

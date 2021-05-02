@@ -12,7 +12,7 @@ public class Teekkari implements Monster {
     }
 
     @Override
-    public Boolean stationary(Boolean stationary) {
+    public boolean isStationary() {
         return false;
     }
 
