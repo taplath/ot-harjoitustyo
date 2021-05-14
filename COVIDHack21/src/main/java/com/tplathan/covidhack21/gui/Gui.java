@@ -1,17 +1,8 @@
 package com.tplathan.covidhack21.gui;
 
-import com.tplathan.covidhack21.gamelogic.Coordinate;
 import com.tplathan.covidhack21.gamelogic.Direction;
 import com.tplathan.covidhack21.gamelogic.Game;
-import com.tplathan.covidhack21.gamelogic.Level;
 import java.io.FileNotFoundException;
-import java.util.Iterator;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class Gui {

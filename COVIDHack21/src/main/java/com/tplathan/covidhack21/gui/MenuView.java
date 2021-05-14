@@ -23,11 +23,7 @@ public class MenuView {
         this.newGameButton.setOnAction(evt -> {
             this.gui.startNewGame();
         });
-
-        this.bp = new BorderPane();
-        this.bp.setTop(this.message);
-        this.bp.setCenter(this.imageLoader.getMenuImage());
-        this.bp.setBottom(this.newGameButton);
+        initBorderPane();
 
         this.scene = new Scene(this.bp);
     }
@@ -38,6 +34,13 @@ public class MenuView {
 
     public void setMessage(String message) {
         this.message.setText(message);
+    }
+
+    private void initBorderPane() throws FileNotFoundException {
+        this.bp = new BorderPane();
+        this.bp.setTop(this.message);
+        this.bp.setCenter(this.imageLoader.getMenuImage());
+        this.bp.setBottom(this.newGameButton);
     }
 
 }
