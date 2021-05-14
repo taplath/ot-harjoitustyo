@@ -4,6 +4,7 @@ import com.tplathan.covidhack21.gamelogic.Coordinate;
 import com.tplathan.covidhack21.gamelogic.Direction;
 import com.tplathan.covidhack21.gamelogic.Game;
 import com.tplathan.covidhack21.gamelogic.Level;
+import java.io.FileNotFoundException;
 import java.util.Iterator;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -20,7 +21,7 @@ public class Gui {
     private MenuView menuView;
     private Stage stage;
 
-    public Gui(Game game, Stage stage) {
+    public Gui(Game game, Stage stage) throws FileNotFoundException {
         this.game = game;
         this.stage = stage;
 
