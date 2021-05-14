@@ -1,6 +1,7 @@
 package com.tplathan.covidhack21.gui;
 
 import java.io.FileNotFoundException;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -46,5 +47,6 @@ public class MenuView {
         this.bp.setTop(this.message);
         this.bp.setCenter(this.imageLoader.getMenuImage());
         this.bp.setBottom(this.newGameButton);
+        BorderPane.setAlignment(this.newGameButton, Pos.CENTER);
     }
 }
