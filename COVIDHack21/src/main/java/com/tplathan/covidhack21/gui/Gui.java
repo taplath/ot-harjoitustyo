@@ -71,6 +71,6 @@ public class Gui {
     }
 
     public void drawLevel() {
-        this.levelView.update(this.game.getCurrentLevel());
+        this.levelView.update(this.game.getCurrentLevel(), this.game.getPlayer());
     }
 }

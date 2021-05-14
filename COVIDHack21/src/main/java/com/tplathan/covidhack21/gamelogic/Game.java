@@ -17,11 +17,15 @@ public class Game {
     public void initNewGame() {
         this.isWon = false;
         this.isLost = false;
-        this.player = new Player();
+        this.resetPlayer();
         this.levels = new ArrayList<>();
         this.levels.add(LevelLoader.firstLevel());
         this.levels.add(LevelLoader.secondLevel());
         this.currentLevelIndex = 0;
+    }
+
+    private void resetPlayer() {
+        this.player = new Player(30);
     }
 
     public boolean isWon() {
@@ -34,18 +38,19 @@ public class Game {
 
     public void movePlayer(Direction direction) {
         this.getCurrentLevel().movePlayer(direction);
-
+        this.player.reduceSanity();
         if (getCurrentLevel().isWon()) {
             if (this.currentLevelIndex == this.levels.size() - 1) {
                 this.isWon = true;
             } else {
                 this.currentLevelIndex++;
+                this.resetPlayer();
             }
         }
 
         this.getCurrentLevel().moveMonsters();
 
-        if (this.getCurrentLevel().isLost()) {
+        if (this.getCurrentLevel().isLost() || this.player.getSanity() <= 0) {
             this.isLost = true;
         }
 
@@ -53,5 +58,9 @@ public class Game {
 
     public Level getCurrentLevel() {
         return this.levels.get(this.currentLevelIndex);
+    }
+
+    public Player getPlayer() {
+        return this.player;
     }
 }

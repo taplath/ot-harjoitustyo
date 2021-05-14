@@ -2,6 +2,7 @@ package com.tplathan.covidhack21.gui;
 
 import com.tplathan.covidhack21.gamelogic.Coordinate;
 import com.tplathan.covidhack21.gamelogic.Level;
+import com.tplathan.covidhack21.gamelogic.Player;
 import com.tplathan.covidhack21.gamelogic.monsters.Monster;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -34,13 +35,13 @@ public class LevelView {
         return this.scene;
     }
     
-    public void update(Level level) {
+    public void update(Level level, Player player) {
         this.levelPane.getChildren().clear();
 
         // Draw infopane        
         this.infoPane.getChildren().clear();
         this.infoPane.add(new Label(level.getName()), 0, 0);
-        
+        this.infoPane.add(new Label("Kriisinhallintakestopisteet: " + player.getSanity()), 0, 1);
         // Draw status text
         this.statusText.setText(level.getActiveStatusText());
 
