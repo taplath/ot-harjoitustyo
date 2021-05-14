@@ -21,6 +21,7 @@ public class Game {
         this.levels = new ArrayList<>();
         this.levels.add(LevelLoader.firstLevel());
         this.levels.add(LevelLoader.secondLevel());
+        this.levels.add(LevelLoader.thirdLevel());
         this.currentLevelIndex = 0;
     }
 

@@ -49,6 +49,9 @@ public class Level {
      * @return true if the player sanity goes to zero.
      */
     public boolean isLost() {
+        if (this.monsters.keySet().contains(this.playerCoordinate)) {
+            return true;
+        }
         return false;
     }
 
@@ -78,19 +81,33 @@ public class Level {
         this.monsters.entrySet().forEach(entry -> {
             Coordinate monsterCoordinate = entry.getKey();
             Monster monster = entry.getValue();
-
-            if (monster.isStationary()) {
-                newLocations.put(monsterCoordinate, monster);
-            } else {
-                ArrayList<Direction> directions = monsterCoordinate.getDirectionTowards(this.getPlayerCoordinate());
-                for (Direction dir : directions) {
-                    Coordinate newCoord = monsterCoordinate.getAdjacent(dir);
-                    if (this.isEmpty(newCoord)) {
-                        newLocations.put(newCoord, monster);
-                        return;
+            switch (monster.getMovement()) {
+                case STATIONARY:
+                    newLocations.put(monsterCoordinate, monster);
+                    break;
+                case TOWARDS_PLAYER:
+                    ArrayList<Direction> directions = monsterCoordinate.getDirectionTowards(this.getPlayerCoordinate());
+                    for (Direction dir : directions) {
+                        Coordinate newCoord = monsterCoordinate.getAdjacent(dir);
+                        if (this.isEmpty(newCoord)) {
+                            newLocations.put(newCoord, monster);
+                            return;
+                        }
                     }
-                }
-                newLocations.put(monsterCoordinate, monster);
+                    newLocations.put(monsterCoordinate, monster);
+                    break;
+                case DOWN:
+                    Coordinate newLocationDown = monsterCoordinate.getAdjacent(Direction.DOWN);
+                    if (this.terrain.containsKey(newLocationDown) && this.terrain.get(newLocationDown).isWall() == false) {
+                        newLocations.put(newLocationDown, monster);
+                    }
+                    break;
+                case UP:
+                    Coordinate newLocationUp = monsterCoordinate.getAdjacent(Direction.UP);
+                    if (this.terrain.containsKey(newLocationUp) && this.terrain.get(newLocationUp).isWall() == false) {
+                        newLocations.put(newLocationUp, monster);
+                    }
+                    break;
             }
         });
         this.monsters = newLocations;
@@ -144,5 +161,9 @@ public class Level {
             return false;
         }
         return true;
+    }
+
+    public void setStaircaseCoordinate(Coordinate coord) {
+        this.staircaseCoordinate = coord;
     }
 }

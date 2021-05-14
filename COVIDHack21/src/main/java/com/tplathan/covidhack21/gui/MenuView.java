@@ -39,7 +39,6 @@ public class MenuView {
         this.newGameButton.setOnAction(evt -> {
             this.gui.startNewGame();
         });
-
     }
 
     private void initBorderPane() throws FileNotFoundException {
