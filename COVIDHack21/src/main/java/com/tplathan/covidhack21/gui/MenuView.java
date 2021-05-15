@@ -9,12 +9,12 @@ import javafx.scene.layout.BorderPane;
 
 public class MenuView {
 
-    private Scene scene;
+    private final Scene scene;
     private BorderPane bp;
-    private Label message;
+    private final Label message;
     private Button newGameButton;
-    private Gui gui;
-    private ImageLoader imageLoader;
+    private final Gui gui;
+    private final ImageLoader imageLoader;
 
     public MenuView(Gui gui) throws FileNotFoundException {
         this.gui = gui;

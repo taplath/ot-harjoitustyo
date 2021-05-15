@@ -8,8 +8,8 @@ package com.tplathan.covidhack21.gamelogic;
  */
 public class TerrainType {
 
-    private boolean isWall;
-    private char marker;
+    private final boolean isWall;
+    private final char marker;
 
     /**
      *

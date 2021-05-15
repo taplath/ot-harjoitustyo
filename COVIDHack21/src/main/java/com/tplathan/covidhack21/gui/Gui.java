@@ -8,9 +8,9 @@ import javafx.stage.Stage;
 public class Gui {
 
     private Game game;
-    private LevelView levelView;
-    private MenuView menuView;
-    private Stage stage;
+    private final LevelView levelView;
+    private final MenuView menuView;
+    private final Stage stage;
 
     public Gui(Game game, Stage stage) throws FileNotFoundException {
         this.game = game;

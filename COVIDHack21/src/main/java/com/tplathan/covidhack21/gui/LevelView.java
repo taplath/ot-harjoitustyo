@@ -12,11 +12,11 @@ import javafx.scene.layout.GridPane;
 
 public class LevelView {
     
-    private Scene scene;
-    private GridPane levelPane;
-    private GridPane infoPane;
-    private Label statusText;
-    private BorderPane bp;
+    private final Scene scene;
+    private final GridPane levelPane;
+    private final GridPane infoPane;
+    private final Label statusText;
+    private final BorderPane bp;
     
     public LevelView() {
         this.levelPane = new GridPane();

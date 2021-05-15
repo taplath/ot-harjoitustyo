@@ -2,7 +2,7 @@ package com.tplathan.covidhack21.gamelogic.monsters;
 
 public class Bussi implements Monster {
 
-    private MovementType movementType;
+    private final MovementType movementType;
 
     public Bussi(MovementType type) {
         this.movementType = type;

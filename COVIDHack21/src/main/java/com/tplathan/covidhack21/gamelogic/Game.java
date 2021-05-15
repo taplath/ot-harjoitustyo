@@ -14,7 +14,7 @@ public class Game {
         this.initNewGame();
     }
 
-    public void initNewGame() {
+    public final void initNewGame() {
         this.isWon = false;
         this.isLost = false;
         this.resetPlayer();
