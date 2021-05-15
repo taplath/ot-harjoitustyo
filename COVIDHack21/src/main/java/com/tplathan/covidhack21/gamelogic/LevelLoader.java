@@ -132,9 +132,17 @@ public class LevelLoader {
 
         level.setTerrain(terrainMap);
 
-        level.addMonster(new Coordinate(4, 4), new Hoitaja());
-        level.addMonster(new Coordinate(3,2), new Teekkari());
-
+        level.addMonster(new Coordinate(8, 9), new Hoitaja());
+        level.addMonster(new Coordinate(4, 4), new Teekkari());
+        level.addMonster(new Coordinate(5, 6), new Mummo());
+        level.addMonster(new Coordinate(7, 7), new Mummo());
+        level.addMonster(new Coordinate(11, 13), new Mummo());
+        level.addMonster(new Coordinate(11, 17), new Mummo());
+        level.addMonster(new Coordinate(12, 27), new Mummo());
+        level.addMonster(new Coordinate(7, 23), new Mummo());
+        level.addMonster(new Coordinate(3, 7), new Mummo());
+        level.addMonster(new Coordinate(14, 4), new Mummo());
+        
         return level;
     }
 }
