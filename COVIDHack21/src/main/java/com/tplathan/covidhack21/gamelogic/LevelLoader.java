@@ -1,6 +1,7 @@
 package com.tplathan.covidhack21.gamelogic;
 
 import com.tplathan.covidhack21.gamelogic.monsters.Bussi;
+import com.tplathan.covidhack21.gamelogic.monsters.Hoitaja;
 import com.tplathan.covidhack21.gamelogic.monsters.Jaara;
 import com.tplathan.covidhack21.gamelogic.monsters.Kapistelija;
 import com.tplathan.covidhack21.gamelogic.monsters.MovementType;
@@ -41,9 +42,9 @@ public class LevelLoader {
         HashMap<Coordinate, TerrainType> terrainMap = generateTerrain(new Coordinate(1, 1), 34, 15);
 
         level.setTerrain(terrainMap);
-        
+
         level.addMonster(new Coordinate(4, 4), new Jaara());
-        
+
         return level;
     }
 
@@ -105,6 +106,24 @@ public class LevelLoader {
         level.addMonster(new Coordinate(23, 14), new Bussi(MovementType.UP));
 
         level.setStaircaseCoordinate(new Coordinate(20, 7));
+
+        return level;
+    }
+
+    /**
+     *
+     * Creates the fourth level of the game
+     *
+     * @return the fourth level object
+     */
+    public static Level fourthLevel() {
+        Level level = new Level("Taso 4: Terveyskeskus");
+
+        HashMap<Coordinate, TerrainType> terrainMap = generateTerrain(new Coordinate(1, 1), 34, 15);
+
+        level.setTerrain(terrainMap);
+
+        level.addMonster(new Coordinate(4, 4), new Hoitaja());
 
         return level;
     }

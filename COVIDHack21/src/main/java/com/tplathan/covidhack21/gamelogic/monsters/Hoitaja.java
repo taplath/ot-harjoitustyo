@@ -1,4 +1,3 @@
-
 package com.tplathan.covidhack21.gamelogic.monsters;
 
 public class Hoitaja implements Monster {
@@ -15,7 +14,7 @@ public class Hoitaja implements Monster {
 
     @Override
     public Action getAction() {
-        return new Action("Hoitaja antaa sinulle koronarokotuksen!");
+        return new Action("Hoitaja antaa sinulle koronarokotuksen! Juokse ulos aurinkoon!");
     }
 
 }

@@ -22,6 +22,7 @@ public class Game {
         this.levels.add(LevelLoader.firstLevel());
         this.levels.add(LevelLoader.secondLevel());
         this.levels.add(LevelLoader.thirdLevel());
+        this.levels.add(LevelLoader.fourthLevel());
         this.currentLevelIndex = 0;
     }
 
