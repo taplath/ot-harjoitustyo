@@ -108,10 +108,11 @@ public class Level {
                 case RANDOM:
                     RandomDirection rd = new RandomDirection();
                     Coordinate newLocationRandom = monsterCoordinate.getAdjacent(rd.getRandomDirection());
-                    if (this.terrain.containsKey(newLocationRandom) && this.terrain.get(newLocationRandom).isWall() == false) {
+                    if (this.isEmpty(newLocationRandom)) {
                         newLocations.put(newLocationRandom, monster);
+                    } else {
+                        newLocations.put(monsterCoordinate, monster);
                     }
-
                     break;
             }
         });

@@ -13,4 +13,6 @@
 | 24.04.2021 | 10 | Menunäkymä, tasolta siirtyminen toiselle, hirviön piirtäminen ruudulle |
 | 01.05.2021 | 3 | JavaDoc ja suunnittelua |
 | 02.05.2021 | 10 | Monsterin liike, testejä |
-Tuntien summa: 52 tuntia
+| 14.05.2021 | 5 | Uusi taso, uusi vihollinen |
+| 15.05.2021 | 3 | Refaktorointia, hirviön random liike |
+Tuntien summa: 60 tuntia
