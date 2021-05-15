@@ -49,10 +49,7 @@ public class Level {
      * @return true if the player sanity goes to zero.
      */
     public boolean isLost() {
-        if (this.monsters.keySet().contains(this.playerCoordinate)) {
-            return true;
-        }
-        return false;
+        return this.monsters.keySet().contains(this.playerCoordinate);
     }
 
     protected void movePlayer(Direction direction) {
@@ -108,6 +105,14 @@ public class Level {
                         newLocations.put(newLocationUp, monster);
                     }
                     break;
+                case RANDOM:
+                    RandomDirection rd = new RandomDirection();
+                    Coordinate newLocationRandom = monsterCoordinate.getAdjacent(rd.getRandomDirection());
+                    if (this.terrain.containsKey(newLocationRandom) && this.terrain.get(newLocationRandom).isWall() == false) {
+                        newLocations.put(newLocationRandom, monster);
+                    }
+
+                    break;
             }
         });
         this.monsters = newLocations;
@@ -157,10 +162,7 @@ public class Level {
         if (coord.equals(this.getPlayerCoordinate())) {
             return false;
         }
-        if (coord.equals(this.getStaircaseCoordinate())) {
-            return false;
-        }
-        return true;
+        return !coord.equals(this.getStaircaseCoordinate());
     }
 
     public void setStaircaseCoordinate(Coordinate coord) {

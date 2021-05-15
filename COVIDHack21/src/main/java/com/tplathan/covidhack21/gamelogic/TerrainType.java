@@ -31,7 +31,7 @@ public class TerrainType {
 
     /**
      *
-     * Returns the character used to represent terrain in ASCII maps
+     * @return the character used to represent terrain in ASCII maps
      */
     public char getMarker() {
         return this.marker;

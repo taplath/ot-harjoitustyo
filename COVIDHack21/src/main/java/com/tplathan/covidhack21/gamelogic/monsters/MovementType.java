@@ -5,6 +5,7 @@ public enum MovementType {
     STATIONARY,
     TOWARDS_PLAYER,
     UP,
-    DOWN;
+    DOWN,
+    RANDOM;
 
 }

@@ -1,6 +1,7 @@
 package com.tplathan.covidhack21.gamelogic;
 
 import com.tplathan.covidhack21.gamelogic.monsters.Bussi;
+import com.tplathan.covidhack21.gamelogic.monsters.Jaara;
 import com.tplathan.covidhack21.gamelogic.monsters.Kapistelija;
 import com.tplathan.covidhack21.gamelogic.monsters.MovementType;
 import com.tplathan.covidhack21.gamelogic.monsters.Mummo;
@@ -40,6 +41,9 @@ public class LevelLoader {
         HashMap<Coordinate, TerrainType> terrainMap = generateTerrain(new Coordinate(1, 1), 34, 15);
 
         level.setTerrain(terrainMap);
+        
+        level.addMonster(new Coordinate(4, 4), new Jaara());
+        
         return level;
     }
 
