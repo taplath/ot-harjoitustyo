@@ -6,6 +6,8 @@ import com.tplathan.covidhack21.gamelogic.monsters.Jaara;
 import com.tplathan.covidhack21.gamelogic.monsters.Kapistelija;
 import com.tplathan.covidhack21.gamelogic.monsters.MovementType;
 import com.tplathan.covidhack21.gamelogic.monsters.Mummo;
+import com.tplathan.covidhack21.gamelogic.monsters.Puu;
+import com.tplathan.covidhack21.gamelogic.monsters.Teekkari;
 import java.util.HashMap;
 
 /**
@@ -37,13 +39,15 @@ public class LevelLoader {
      * @return the first level object
      */
     public static Level firstLevel() {
-        Level level = new Level("Taso 1: Kampus");
+        Level level = new Level("Taso 1: Gurula");
 
         HashMap<Coordinate, TerrainType> terrainMap = generateTerrain(new Coordinate(1, 1), 34, 15);
 
         level.setTerrain(terrainMap);
 
         level.addMonster(new Coordinate(4, 4), new Jaara());
+        level.addMonster(new Coordinate(7, 7), new Jaara());
+        level.addMonster(new Coordinate(11, 12), new Jaara());
 
         return level;
     }
@@ -61,12 +65,17 @@ public class LevelLoader {
 
         level.setTerrain(terrainMap);
 
-        level.addMonster(new Coordinate(4, 4), new Mummo());
+        level.addMonster(new Coordinate(4, 4), new Puu());
         level.addMonster(new Coordinate(6, 2), new Mummo());
-        level.addMonster(new Coordinate(11, 14), new Mummo());
+        level.addMonster(new Coordinate(11, 14), new Puu());
         level.addMonster(new Coordinate(8, 8), new Mummo());
-        level.addMonster(new Coordinate(2, 9), new Mummo());
+        level.addMonster(new Coordinate(2, 9), new Puu());
+        level.addMonster(new Coordinate(31, 7), new Puu());
         level.addMonster(new Coordinate(33, 8), new Mummo());
+        level.addMonster(new Coordinate(32, 17), new Puu());
+        level.addMonster(new Coordinate(22, 17), new Puu());
+        level.addMonster(new Coordinate(21, 7), new Puu());
+        level.addMonster(new Coordinate(22, 2), new Puu());
 
         level.addMonster(new Coordinate(12, 12), new Kapistelija());
 
@@ -105,7 +114,7 @@ public class LevelLoader {
         level.addMonster(new Coordinate(23, 13), new Bussi(MovementType.UP));
         level.addMonster(new Coordinate(23, 14), new Bussi(MovementType.UP));
 
-        level.setStaircaseCoordinate(new Coordinate(20, 7));
+        level.setStaircaseCoordinate(new Coordinate(15, 7));
 
         return level;
     }
@@ -124,6 +133,7 @@ public class LevelLoader {
         level.setTerrain(terrainMap);
 
         level.addMonster(new Coordinate(4, 4), new Hoitaja());
+        level.addMonster(new Coordinate(3,2), new Teekkari());
 
         return level;
     }

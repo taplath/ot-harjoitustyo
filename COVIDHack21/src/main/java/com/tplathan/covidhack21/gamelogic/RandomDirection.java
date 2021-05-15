@@ -34,7 +34,7 @@ public class RandomDirection {
          *
          * @return a number between 1 and 4
          */
-    private static int rollRandomNumber() {
+    public static int rollRandomNumber() {
         int min = 1;
         int max = 4;
         int range = max - min + 1;

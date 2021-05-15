@@ -14,9 +14,9 @@ public class Level {
 
     private HashMap<Coordinate, TerrainType> terrain;
     private HashMap<Coordinate, Monster> monsters;
-    private Coordinate playerCoordinate;
+    private final Coordinate playerCoordinate;
     private Coordinate staircaseCoordinate;
-    private String name;
+    private final String name;
     private String activeStatusText;
 
     /**
