@@ -19,4 +19,18 @@ public class LevelLoaderTest {
         assertNotNull(level.getStaircaseCoordinate());
     }
 
+    @Test
+    public void testLoadingThirdLevel() {
+        Level level = LevelLoader.thirdLevel();
+        assertNotNull(level.getPlayerCoordinate());
+        assertNotNull(level.getStaircaseCoordinate());
+    }
+
+    @Test
+    public void testLoadingFourthLevel() {
+        Level level = LevelLoader.fourthLevel();
+        assertNotNull(level.getPlayerCoordinate());
+        assertNotNull(level.getStaircaseCoordinate());
+    }
+
 }

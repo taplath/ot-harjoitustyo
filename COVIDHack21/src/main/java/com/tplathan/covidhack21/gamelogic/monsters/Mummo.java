@@ -1,6 +1,6 @@
 package com.tplathan.covidhack21.gamelogic.monsters;
 
-import com.tplathan.covidhack21.gamelogic.RandomDirection;
+import com.tplathan.covidhack21.gamelogic.Randomizer;
 
 public class Mummo implements Monster {
 
@@ -15,18 +15,14 @@ public class Mummo implements Monster {
     }
 
     @Override
-    public Action getAction() throws NullPointerException {
-        switch (RandomDirection.rollRandomNumber()) {
-            case 1:
-                return new Action("Mummo höpisee polvivaivoistaan.");
-            case 2:
-                return new Action("Mummo muistelee vanhoja hyviä DOS-aikoja.");
-            case 3:
-                return new Action("Mummo yrittää muistella, kuka se Maud-henkilö taas olikaan.");
-            case 4:
-                return new Action("Mummo: Onko tämä se intternets?");
-        }
-        return null;
+    public Action getAction() {
+        String[] textValues = new String[]{
+            "Mummo höpisee polvivaivoistaan.",
+            "Mummo muistelee vanhoja hyviä DOS-aikoja.",
+            "Mummo yrittää muistella, kuka se Maud-henkilö taas olikaan.",
+            "Mummo: Onko tämä se intternets?"
+        };
+        String text = Randomizer.selectRandomValue(textValues);
+        return new Action(text);
     }
-
 }

@@ -1,6 +1,6 @@
 package com.tplathan.covidhack21.gamelogic.monsters;
 
-import com.tplathan.covidhack21.gamelogic.RandomDirection;
+import com.tplathan.covidhack21.gamelogic.Randomizer;
 
 public class Puu implements Monster {
 
@@ -15,17 +15,14 @@ public class Puu implements Monster {
     }
 
     @Override
-    public Action getAction() throws NullPointerException {
-        switch (RandomDirection.rollRandomNumber()) {
-            case 1:
-                return new Action("Tämä on puu.");
-            case 2:
-                return new Action("Törmäsit puuhun!");
-            case 3:
-                return new Action("Kävelit puuta päin, senkin pölkkypää!");
-            case 4:
-                return new Action("Betula pendula, rauduskoivu.");
-        }
-        return null;
+    public Action getAction() {
+        String[] textValues = new String[]{
+            "Tämä on puu.",
+            "Törmäsit puuhun!",
+            "Kävelit puuta päin, senkin pölkkypää!",
+            "Betula pendula, rauduskoivu."
+        };
+        String text = Randomizer.selectRandomValue(textValues);
+        return new Action(text);
     }
 }
