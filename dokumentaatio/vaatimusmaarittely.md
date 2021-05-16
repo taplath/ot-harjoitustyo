@@ -10,7 +10,8 @@ Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on
 - Useita erilaisia "hirviöitä", joista osa voi haitata pelaajan etenemistä pelissä
    - Kaikilla hirviöillä on vähintään yksi dialogiteksti (tai oikeastaan monologi, *roguepelien* hengessä)
 - Pelissä ei taistella fyysisesti 
-   - Pelaajan kestopisteiden sijaan pelaajalla on kriisinsietokestopisteet, jotka vähenevät pelaajan liikkuessa, ja palaavat uudelle tasolle päästyä takaisin maksimiinsa
+   - Pelaajan kestopisteiden sijaan pelaajalla on kriisinsietokestopisteet
+   - Kriisinsietokestopisteet vähenevät, kun pelaaja liikkuu, ja palautuvat täyteen, kun pelaaja saavuttaa seuraavan tason
 - Pelin voittaa läpäisemällä kaikki tasot, rokotetuksi tulemisesta voi kuitenkin saada hyvän mielen
    - Pelin häviää, jos kriisinsietokestopisteet laskevat nollaan, tai jos pelaaja jää bussin alle
 - Peli sisältää huonoa, mutta painokelpoista huumoria
