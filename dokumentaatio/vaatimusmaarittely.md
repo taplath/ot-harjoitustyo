@@ -1,24 +1,20 @@
 # Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on tarkoitus saada COVID-rokotus, jotta läpäisee pelin.
+Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on tarkoitus saada COVID-rokotus, jolla ei kuitenkaan ole suoraan vaikutusta pelin läpäisemiseen.
 
 ## Pelin yleiskuva ja perustoiminnallisuuksia
-- Peli on *roguelike*
+- Peli on *roguelike*, ilman tasojen proseduraalista generointia
 - Ennalta määritellyt peliruudut eli tasot, joihin pelaaja etenee taso kerrallaan
-  - [x] Peli piirtää ensimmäisen tason ja ruudun josta voi siirtyä seuraavalle tasolle - tehty
-  - [x] Pelissä voi liikuttaa pelaajahahmoa - tehty
-  - [x] Pelissä voi siirtyä seuraavalle tasolle
-- Useita erilaisia "hirviöitä", jotka voivat auttaa tai haitata pelaajan etenemistä pelissä
-  - [x] Hirviö liikkuu ja häiritsee pelaajan etenemistä
-  - [ ] Hirviö liikkuu ja auttaa pelaajan etenemistä
+- Useita erilaisia "hirviöitä", joista osa voi haitata pelaajan etenemistä pelissä
 - Pelissä ei taistella fyysisesti 
-   - Pelaajan kestopisteiden sijaan pelaajalla on kriisinsietokykypisteet (KSKP)
-- Pelin voi voittaa saamalla COVID-rokotuksen viimeisellä tasolla
-   - Pelin häviää, jos kriisinsietokykypisteet (KSKP) laskevat nollaan
-- Peli tulee sisältämään huonoa, mutta painokelpoista huumoria
+   - Pelaajan kestopisteiden sijaan pelaajalla on kriisinsietokestopisteet, jotka vähenevät pelaajan liikkuessa, ja palaavat uudelle tasolle päästyä takaisin maksimiinsa
+- Pelin voittaa läpäisemällä kaikki tasot, rokotetuksi tulemisesta voi kuitenkin saada hyvän mielen
+   - Pelin häviää, jos kriisinsietokestopisteet laskevat nollaan, tai jos pelaaja jää bussin alle
+- Peli sisältää huonoa, mutta painokelpoista huumoria
 
 ## Pelin jatkokehityssuunnitelmia
-- Peliruutujen proseduraalinen generointi
+- Tasojen proseduraalinen generointi
 - Erikoistasot ja "alaluolastot"
 - Tehtävät ja palkinnot
+- Esineet ja niiden käyttäminen
