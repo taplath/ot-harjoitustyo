@@ -1,7 +1,7 @@
 # Vaatimusmäärittely
 
 ## Sovelluksen tarkoitus
-Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on tarkoitus saada COVID-rokotus, jolla ei kuitenkaan ole suoraan vaikutusta pelin läpäisemiseen.
+Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on tarkoitus saada COVID-rokotus, jolla ei kuitenkaan ole suoraa vaikutusta pelin läpäisemiseen.
 
 ## Pelin yleiskuva ja perustoiminnallisuuksia
 - Peli on *roguelike*, ilman tasojen proseduraalista generointia
