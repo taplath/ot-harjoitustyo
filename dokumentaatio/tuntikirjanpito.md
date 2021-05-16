@@ -14,5 +14,5 @@
 | 01.05.2021 | 3 | JavaDoc ja suunnittelua |
 | 02.05.2021 | 10 | Monsterin liike, testejä |
 | 14.05.2021 | 5 | Uusi taso, uusi vihollinen |
-| 15.05.2021 | 3 | Refaktorointia, hirviön random liike |
-Tuntien summa: 60 tuntia
+| 15.05.2021 | 5 | Refaktorointia, hirviön random liike |
+Tuntien summa: 62 tuntia
