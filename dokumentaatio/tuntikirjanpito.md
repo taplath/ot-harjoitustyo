@@ -15,4 +15,5 @@
 | 02.05.2021 | 10 | Monsterin liike, testejä |
 | 14.05.2021 | 5 | Uusi taso, uusi vihollinen |
 | 15.05.2021 | 5 | Refaktorointia, hirviön random liike |
-Tuntien summa: 62 tuntia
+| 16.05.2021 | 9 | Testausta, refaktorointia, viimeistelyä |
+Tuntien summa: 71 tuntia
