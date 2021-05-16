@@ -38,7 +38,7 @@ Komennolla
 
 > mvn package
 
-luodaan hakemistoon _target_ jar-tiedosto _covidhack21-1.0-SNAPSHOT.jar_
+luodaan hakemistoon _COVIDHack21_ jar-tiedosto _covidhack21-1.0-SNAPSHOT.jar_
 
 ---
 
