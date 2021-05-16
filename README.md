@@ -46,6 +46,8 @@ JAR-tiedosto ajetaan komennolla
 
 > _java -jar covidhack21-1.0-SNAPSHOT.jar_
 
+!!!HUOM!!! Komento tulee ajaa kansiossa *COVIDHack21*, EI kansiossa *target*
+
 ### Testaus
 
 Testit suoritetaan komennolla
