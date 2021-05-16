@@ -8,6 +8,8 @@ Pelin käynnistyessä peli avaa (keskeneräisen) _main menun_, jossa nappia pain
 
 ## Dokumentaatio
 
+[Käyttöohje](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Vaatimusmäärittely](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/taplath/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
