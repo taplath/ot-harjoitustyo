@@ -6,7 +6,9 @@ Sovellus on seikkailupeli NetHackin ja Spurguxin hengessä. Pelissä pelaajan on
 ## Pelin yleiskuva ja perustoiminnallisuuksia
 - Peli on *roguelike*, ilman tasojen proseduraalista generointia
 - Ennalta määritellyt peliruudut eli tasot, joihin pelaaja etenee taso kerrallaan
+   - Pelaajan lyhyt matka alkaa Gurulasta, joka on ensimmäinen taso
 - Useita erilaisia "hirviöitä", joista osa voi haitata pelaajan etenemistä pelissä
+   - Kaikilla hirviöillä on vähintään yksi dialogiteksti (tai oikeastaan monologi, *roguepelien* hengessä)
 - Pelissä ei taistella fyysisesti 
    - Pelaajan kestopisteiden sijaan pelaajalla on kriisinsietokestopisteet, jotka vähenevät pelaajan liikkuessa, ja palaavat uudelle tasolle päästyä takaisin maksimiinsa
 - Pelin voittaa läpäisemällä kaikki tasot, rokotetuksi tulemisesta voi kuitenkin saada hyvän mielen
