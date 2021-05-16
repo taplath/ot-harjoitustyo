@@ -20,6 +20,8 @@ Pelin käynnistyessä peli avaa (keskeneräisen) _main menun_, jossa nappia pain
 
 ## Releaset
 
+[Final Release](https://github.com/taplath/ot-harjoitustyo/releases/tag/v1.0)
+
 [Viikko 5](https://github.com/taplath/ot-harjoitustyo/releases/tag/viikko5)
 
 [Viikko 6](https://github.com/taplath/ot-harjoitustyo/releases/tag/viikko6)
